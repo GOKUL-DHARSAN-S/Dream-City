@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#0957DE</color>
+    <color name="color_Primary_lite">#0A0957DE</color>
+    <color name="lite_black">#343A40</color>
+    <color name="color_section_divider">#93A4B8</color>
+
+    <color name="dashboard_color">#F9FBFF</color>
+    <color name="ash_txt">#7A7A7A</color>
+
+    <color name="dwr_title_bar_color">#0957DE</color>
+    <color name="button_bg">#0957DE</color>
+
+    <color name="red">#FF0000</color>
+    <color name="transptant">#00FFFFFF</color>
+    <color name="dwr_doctor_line">#8093A4B8</color>
+
+</resources>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".workerFirstPage"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/tv_user_Icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/view_spacing15"
+            android:layout_marginTop="@dimen/view_spacing20"
+            android:background="@drawable/ic_hexagon"
+            android:gravity="center"
+            android:text="C"
+            android:textColor="#2A405D"
+            android:textSize="@dimen/text_medium_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_welcome_back"
+            style="@style/Textsplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_spacing10"
+            android:layout_marginTop="@dimen/view_spacing5"
+            android:text="welcome"
+            app:layout_constraintLeft_toRightOf="@id/tv_user_Icon"
+            app:layout_constraintTop_toTopOf="@id/tv_user_Icon" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            style="@style/dwrHeadText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_spacing10"
+            android:layout_marginTop="@dimen/view_spacing5"
+            android:text="Worker name"
+            app:layout_constraintBottom_toBottomOf="@id/tv_user_Icon"
+            app:layout_constraintLeft_toRightOf="@id/tv_user_Icon" />
+
+
+
+        <ImageView
+            android:id="@+id/ic_setting"
+            android:layout_width="@dimen/view_spacing30"
+            android:layout_height="@dimen/view_spacing30"
+            android:layout_marginRight="@dimen/view_spacing15"
+            android:src="@drawable/baseline_settings_24"
+            app:layout_constraintBottom_toBottomOf="@id/tv_user_Icon"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintTop_toTopOf="@id/tv_user_Icon" />
+
+        <LinearLayout
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/view_spacing30"
+            android:background="@drawable/background_rect"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_user_Icon"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="15dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/attended_overview_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/view_spacing20"
+                android:layout_marginTop="@dimen/view_spacing30"
+                android:layout_marginEnd="@dimen/view_spacing20"
+                android:layout_marginBottom="@dimen/view_spacing5"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/view_spacing10"
+                    android:layout_marginTop="@dimen/view_spacing10"
+                    android:layout_marginEnd="@dimen/view_spacing10">
+
+                    <TextView
+                        android:id="@+id/attended_overview_label"
+                        style="@style/Textlabel_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="List Overview"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/data_constrationlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/attended_overview_label">
+
+                        <LinearLayout
+                            android:id="@+id/present_Linear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/view_spacing20"
+                            android:paddingRight="@dimen/view_spacing20"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_Present_label"
+                                style="@style/dwrDetailsTextAsh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/view_spacing10"
+                                android:layout_marginTop="@dimen/view_spacing10"
+                                android:text="Reported"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/attended_overview_label" />
+
+                            <TextView
+                                android:id="@+id/tv_Present"
+                                style="@style/Textlabel_dashboard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/view_spacing10"
+                                android:layout_marginTop="@dimen/view_spacing4"
+                                android:layout_marginBottom="@dimen/view_spacing10"
+                                android:text="18"
+                                android:textSize="@dimen/text_medium_12"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_Present_label" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="1dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="@dimen/view_spacing10"
+                            android:layout_marginTop="@dimen/view_spacing15"
+                            android:layout_marginBottom="@dimen/view_spacing15"
+                            android:background="@color/dwr_doctor_line"
+                            app:layout_constraintBottom_toBottomOf="@id/absent_Linear"
+                            app:layout_constraintEnd_toStartOf="@id/absent_Linear"
+                            app:layout_constraintStart_toEndOf="@id/present_Linear" />
+
+                        <LinearLayout
+                            android:id="@+id/absent_Linear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/view_spacing20"
+                            android:paddingRight="@dimen/view_spacing20"
+                            app:layout_constraintStart_toEndOf="@id/view1"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_Absent_label"
+                                style="@style/dwrDetailsTextAsh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/view_spacing10"
+                                android:layout_marginTop="@dimen/view_spacing10"
+                                android:text="Solved"
+                                app:layout_constraintStart_toEndOf="@id/view1"
+                                app:layout_constraintTop_toBottomOf="@id/attended_overview_label" />
+
+                            <TextView
+                                android:id="@+id/tv_Absent"
+                                style="@style/Textlabel_dashboard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/view_spacing10"
+                                android:layout_marginTop="@dimen/view_spacing4"
+                                android:layout_marginBottom="@dimen/view_spacing10"
+                                android:text="02"
+                                android:textSize="@dimen/text_medium_12"
+                                app:layout_constraintStart_toEndOf="@id/view1"
+                                app:layout_constraintTop_toBottomOf="@id/tv_Absent_label" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="1dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="@dimen/view_spacing10"
+                            android:layout_marginTop="@dimen/view_spacing15"
+                            android:layout_marginBottom="@dimen/view_spacing15"
+                            android:background="@color/dwr_doctor_line"
+                            app:layout_constraintBottom_toBottomOf="@id/leaves_Linear"
+                            app:layout_constraintEnd_toStartOf="@id/leaves_Linear"
+                            app:layout_constraintStart_toEndOf="@id/absent_Linear" />
+
+                        <LinearLayout
+                            android:id="@+id/leaves_Linear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/view_spacing20"
+                            android:paddingRight="@dimen/view_spacing20"
+                            app:layout_constraintStart_toEndOf="@id/view2"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_Leaves_label"
+                                style="@style/dwrDetailsTextAsh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/view_spacing10"
+                                android:layout_marginTop="@dimen/view_spacing10"
+                                android:singleLine="false"
+                                android:text="Working"
+                                app:layout_constraintStart_toEndOf="@id/view2"
+                                app:layout_constraintTop_toBottomOf="@id/attended_overview_label" />
+
+                            <TextView
+                                android:id="@+id/tv_Leaves"
+                                style="@style/Textlabel_dashboard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/view_spacing10"
+                                android:layout_marginTop="@dimen/view_spacing4"
+                                android:layout_marginBottom="@dimen/view_spacing10"
+                                android:text="16"
+                                android:textSize="@dimen/text_medium_12"
+                                app:layout_constraintStart_toEndOf="@id/view2"
+                                app:layout_constraintTop_toBottomOf="@id/tv_Leaves_label" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_doctor_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/view_spacing8"
+                android:layout_marginTop="@dimen/view_spacing20"
+                android:layout_marginEnd="@dimen/view_spacing8"
+                android:paddingBottom="@dimen/view_spacing50"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/added_issues_list" />
+
+            <TextView
+                android:id="@+id/no_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/view_spacing50"
+                android:gravity="center"
+                android:text="No Data"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
